@@ -28,7 +28,7 @@ class Dispatcher {
         $urlMode  =  C('URL_MODEL');
         if(isset($_GET[C('VAR_PATHINFO')])) { // 判断URL里面是否有兼容模式参数
             $_SERVER['PATH_INFO']   = $_GET[C('VAR_PATHINFO')];
-            unset($_GET[C('VAR_PATHINFO')]);
+//            unset($_GET[C('VAR_PATHINFO')]); //modify by xuye
         }
         if($urlMode == URL_COMPAT ){
             // 兼容模式判断
@@ -58,7 +58,7 @@ class Dispatcher {
                     if('www' != $subDomain && !in_array($subDomain,C('APP_SUB_DOMAIN_DENY'))) {
                         $rule =  $rules['*'];
                     }
-                }                
+                }
             }
 
             if(!empty($rule)) {
@@ -109,21 +109,26 @@ class Dispatcher {
                     $_SERVER['PATH_INFO'] = preg_replace('/.'.__EXT__.'$/i','',$_SERVER['PATH_INFO']);
                 }
             }
-
+            $paths = explode($depr,trim($_SERVER['PATH_INFO'],'/'));
+            if(C('VAR_URL_PARAMS')) {
+                // 直接通过$_GET['_URL_'][1] $_GET['_URL_'][2] 获取URL参数 方便不用路由时参数获取
+                $_GET[C('VAR_URL_PARAMS')]   =  $paths;
+            }
             if(!self::routerCheck()){   // 检测路由规则 如果没有则按默认规则调度URL
-                $paths = explode($depr,trim($_SERVER['PATH_INFO'],'/'));
+
+                /*$paths = explode($depr,trim($_SERVER['PATH_INFO'],'/')); //modify by xuye
                 if(C('VAR_URL_PARAMS')) {
                     // 直接通过$_GET['_URL_'][1] $_GET['_URL_'][2] 获取URL参数 方便不用路由时参数获取
                     $_GET[C('VAR_URL_PARAMS')]   =  $paths;
-                }
+                }*/
                 $var  =  array();
-                if (C('APP_GROUP_LIST') && !isset($_GET[C('VAR_GROUP')])){
+/*                if (C('APP_GROUP_LIST') && !isset($_GET[C('VAR_GROUP')])){
                     $var[C('VAR_GROUP')] = in_array(strtolower($paths[0]),explode(',',strtolower(C('APP_GROUP_LIST'))))? array_shift($paths) : '';
                     if(C('APP_GROUP_DENY') && in_array(strtolower($var[C('VAR_GROUP')]),explode(',',strtolower(C('APP_GROUP_DENY'))))) {
                         // 禁止直接访问分组
                         exit;
                     }
-                }
+                }*/
                 if(!isset($_GET[C('VAR_MODULE')])) {// 还没有定义模块名称
                     $var[C('VAR_MODULE')]  =   array_shift($paths);
                 }
@@ -148,7 +153,7 @@ class Dispatcher {
             // 分组URL地址
             define('__GROUP__',(!empty($domainGroup) || strtolower(GROUP_NAME) == strtolower(C('DEFAULT_GROUP')) )?__APP__ : __APP__.'/'.(C('URL_CASE_INSENSITIVE') ? strtolower(GROUP_NAME) : GROUP_NAME));
         }
-        
+
         // 定义项目基础加载路径
         define('BASE_LIB_PATH', (defined('GROUP_NAME') && C('APP_GROUP_MODE')==1) ? APP_PATH.C('APP_GROUP_PATH').'/'.GROUP_NAME.'/' : LIB_PATH);
         if(defined('GROUP_NAME')) {
@@ -158,7 +163,7 @@ class Dispatcher {
                 $common_path    =   BASE_LIB_PATH.'Common/';
             }else{ // 普通分组模式
                 $config_path    =   CONF_PATH.GROUP_NAME.'/';
-                $common_path    =   COMMON_PATH.GROUP_NAME.'/';             
+                $common_path    =   COMMON_PATH.GROUP_NAME.'/';
             }
             // 加载分组配置文件
             if(is_file($config_path.'config.php'))
@@ -174,10 +179,10 @@ class Dispatcher {
                 include $common_path.'function.php';
         }else{
             C('CACHE_PATH',CACHE_PATH);
-        }       
+        }
         define('MODULE_NAME',self::getModule(C('VAR_MODULE')));
         define('ACTION_NAME',self::getAction(C('VAR_ACTION')));
-        
+
         // 当前模块和分组地址
         $moduleName    =   defined('MODULE_ALIAS')?MODULE_ALIAS:MODULE_NAME;
         if(defined('GROUP_NAME')) {
@@ -253,8 +258,8 @@ class Dispatcher {
                     return   '';
                 }
             }
-        }        
-        return strip_tags(C('URL_CASE_INSENSITIVE')?strtolower($action):$action);
+        }
+        return strip_tags(C('URL_CASE_INSENSITIVE') ? strtolower($action) : $action);
     }
 
     /**

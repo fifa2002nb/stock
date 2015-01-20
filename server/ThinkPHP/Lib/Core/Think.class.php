@@ -211,6 +211,14 @@ class Think {
         // 根据自动加载路径设置进行尝试搜索
         $paths  =   explode(',',C('APP_AUTOLOAD_PATH'));
         foreach ($paths as $path){
+            //add by xuye
+            if(!$path) {
+                continue;
+            }
+            if(is_file($path.'/'.$file)) {
+                require_cache($path."/".$file);
+                return;
+            }
             if(import($path.'.'.$class))
                 // 如果加载类成功则返回
                 return ;
