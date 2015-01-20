@@ -37,7 +37,7 @@ class IndexAction extends CommonAction {
         if($this->isLogin()) {
             $this->assign("APP_PATH", str_replace("index.php", "", __APP__));
             $this->assign("userInfo", json_encode($this->user));
-            $this->display("app");
+            $this->display("logout");
         } else {
             $this->display("login");
         }
