@@ -31,7 +31,7 @@ class IndexAction extends CommonAction {
         }
 
         $javascripts[] = U('FrontendRuntime/read?js=common/base/app.js');
-
+        
         $this->assign("javascripts", $javascripts);
 
         if($this->isLogin()) {

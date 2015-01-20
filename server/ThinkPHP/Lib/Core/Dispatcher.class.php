@@ -227,7 +227,7 @@ class Dispatcher {
             // 智能识别方式 index.php/user_type/index/ 识别到 UserTypeAction 模块
             $module = ucfirst(parse_name($module,1));
         }
-        return strip_tags($module);
+        return ucfirst(strip_tags($module)); // modify by xuye add ucfirst()
     }
 
     /**
