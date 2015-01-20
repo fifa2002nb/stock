@@ -1,0 +1,277 @@
+[ 2015-01-20T00:01:16+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000146s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000428s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000260s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:01:16+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:01:26+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000151s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000444s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000267s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:01:26+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:01:58+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000148s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000444s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000271s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:01:58+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:02:34+08:00 ] 115.231.98.84 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000151s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000432s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000255s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 27 行.
+
+[ 2015-01-20T00:02:34+08:00 ] 115.231.98.84 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:02:39+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000146s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000438s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000254s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:02:39+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:03:01+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000146s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000438s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000255s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:03:01+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T00:03:07+08:00 ] 180.157.55.206 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000154s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000452s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000262s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T00:03:07+08:00 ] 180.157.55.206 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
+[ 2015-01-20T11:36:52+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000563s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:37:17+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:37:18+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000557s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:37:52+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:38:47+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:38:47+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000534s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:40:35+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000541s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:40:35+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:47:56+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000801s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:47:56+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000540s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:48:50+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000535s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:49:26+08:00 ] 101.81.30.119 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 494 行.
+NOTIC: [8] Undefined index: _URL_ /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+ERR: 无法加载模块:Index
+
+[ 2015-01-20T11:49:32+08:00 ] 101.81.30.119 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.000290s ]
+INFO: [ path_info ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Constant __EXT__ already defined /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.000898s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+NOTIC: [8] Undefined offset: 1 /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Common/common.php 第 495 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with that of CommonAction::index() /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-01-20T11:49:32+08:00 ] 101.81.30.119 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /home/uaq/opbin/xuye/local/openresty/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 299 行.
+
