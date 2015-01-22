@@ -39,7 +39,7 @@ class IndexAction extends CommonAction {
             $this->assign("userInfo", json_encode($this->user));
             $this->display("logout");
         } else {
-            $this->display("login");
+            $this->display("miles_login");
         }
     }
 
