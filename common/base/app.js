@@ -10,16 +10,15 @@
             'mgcrea.ngStrap',
             'localytics.directives', //FOR CHOSEN
             'ui.utils',
-            'ones.gridView',
+            /*'ones.gridView',   //modify by xuye
             "ones.formMaker",
-            'ones.detailView',
+            'ones.detailView',*/
 
             "ones.pluginsModule",
             "ones.print",
-
             '[ones.requirements.placeholder]',
 
-            'ones.common',
+            //'ones.common',   //modify by xuye
             'ones.common.services',
             'ones.configModule',
             'ones.commonView' //需要先加载模块，让模块路由优先匹配
