@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="common/statics/images/favicon.ico">
+
+        <title>MILES</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="common/statics/css/bootstrap.css" />
+        <!-- Custom styles for this template -->
+        <link href="common/statics/css/miles_signin.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container" ng-controller="LoginCtl">
+            <form name="LoginForm" class="form-signin">
+                <h3 class="form-signin-heading">
+                    <span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span>
+                </h3>
+                <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
+                    <div><span ng-bind-html="error.msg"></span></div>
+                </div>
+                <input type="username" class="form-control" ng-model="loginInfo.username" placeholder="{{'lang.username'|lang}}" required autofocus>
+                <input type="password" class="form-control" ng-model="loginInfo.password" placeholder="{{'lang.password'|lang}}" required>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" ng-click="doLogin()" ng-disabled="LoginForm.$invalid">
+                    <span ng-bind="'lang.actions.login'|lang"></span>
+                </button>
+                <a href="#" id="forgot-password-link">
+                    <span ng-bind="'lang.messages.i_fogot_password'|lang"></span>
+                </a>
+            </form>
+
+            <!-- -->
+            <div id="password-reset-form" style="display: none;"> 
+                <div class="form-signin">
+                    <span>Password reset</span>
+                    <div class="close">×</div>
+                </div>
+                <form action="index.html" id="password-reset-form_id" novalidate="novalidate" class="form-signin">
+                    <input type="text" class="form-control" ng-model="loginInfo.reset_email" placeholder="{{'lang.email'|lang}}" required>
+                    <div class="form-actions">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                               <span>reset</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div> <!-- /container -->
+
+        <script type="text/javascript">
+            var ones = {
+                BaseConf: {
+                    LoadedApps: ['{$loadedAppsStr}'],
+                    DEBUG: {$isDebug}
+                }
+            };
+        </script>
+        <script src="common/vendor/jquery/jquery-2.1.1.min.js"></script>
+        <script src="common/vendor/angular-1.3.0-rc/angular.min.js"></script>
+        <script src="common/vendor/angular-1.3.0-rc/angular-resource.min.js"></script>
+        <script src="common/lib/function.js"></script>
+        <script src="common/lib/caches.js"></script>
+        <script src="common/base/config.js"></script>
+        <script src="common/base/login.js"></script>
+        <script src="common/base/filter.js"></script>
+
+        <script type="text/javascript">
+            /**
+             * i18n
+             * */
+            jQuery(function(){
+                /**
+                 * 加载语言包
+                 * */
+                ones.i18n = ones.caches.getItem("ones.i18n");
+                if((!ones.i18n || isEmptyObject(ones.i18n)) && !ones.installing) {
+                    jQuery.get(ones.BaseConf.BSU+"FrontendRuntime/index/action/getI18n/lang/zh-cn").success(function(data) {
+                        ones.caches.setItem("ones.i18n", data, 1);
+                        ones.i18n = ones.caches.getItem("ones.i18n");
+                        if(!ones.i18n) {
+                            throw("can't load i18n package.");
+                        }
+
+                        angular.element(document).ready(function() {
+                            angular.bootstrap(document, ['ones.login']);
+                        });
+                    });
+                } else {
+                    angular.element(document).ready(function() {
+                        angular.bootstrap(document, ['ones.login']);
+                    });
+                }
+                $("#password-reset-form .close").click(function(){
+                    $("#password-reset-form").fadeOut();
+                });
+                $("#forgot-password-link").click(function(){
+                    $("#password-reset-form").fadeIn();
+                });
+            });
+        </script>
+
+    </body>
+</html>
