@@ -129,11 +129,11 @@ class CommonAction extends RestAction {
         $appConf = array();
         if($dirHandle) {
             while(($file = readdir($dirHandle)) !== false) {
-                if(in_array($file, $disabledApps) or !in_array($file, $enabledApps)) {
+                //modify by xuye
+                /*if(in_array($file, $disabledApps) or !in_array($file, $enabledApps)) {
                     continue;
-                }
+                }*/
                 $appDir = $appDirs.DS.$file.DS;
-
                 if(!is_dir($appDir) or !is_file($appDir."config.json") or in_array($file, $blacklist)) {
                     continue;
                 }

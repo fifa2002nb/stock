@@ -22,6 +22,8 @@
     - "vendor/angularModules/angular-chosen/chosen.js"
     - "base/config.js"
     - "vendor/AdminLTE.js"
+    - "vendor/highcharts/highstock.js" 
+    - "vendor/highcharts/ng-highcharts.js"
     - "lib/caches.js"
     - "lib/plugin.js"
     - "lib/function.js"
