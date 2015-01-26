@@ -18,27 +18,39 @@
     <body>
         <div class="container" ng-controller="LoginCtl">
             <form name="LoginForm" class="form-signin">
-                <h3 class="form-signin-heading">
-                    <span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span>
-                </h3>
-                <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
-                    <div><span ng-bind-html="error.msg"></span></div>
+                <div class="form-group">
+                    <h3 class="form-signin-heading">
+                        <span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span>
+                    </h3>
+                    <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
+                        <div><span ng-bind-html="error.msg"></span></div>
+                    </div>
                 </div>
-                <input type="username" class="form-control" ng-model="loginInfo.username" placeholder="{{'lang.username'|lang}}" required autofocus>
-                <input type="password" class="form-control" ng-model="loginInfo.password" placeholder="{{'lang.password'|lang}}" required>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
+                <div class="form-group">
+                    <input type="username" class="form-control" ng-model="loginInfo.username" placeholder="{{'lang.username'|lang}}" required autofocus>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" ng-click="doLogin()" ng-disabled="LoginForm.$invalid">
-                    <span ng-bind="'lang.actions.login'|lang"></span>
-                </button>
-                <a href="#" id="forgot-password-link">
-                    <span ng-bind="'lang.messages.i_fogot_password'|lang"></span>
-                </a>
+                <div class="form-group">
+                    <input type="password" class="form-control" ng-model="loginInfo.password" placeholder="{{'lang.password'|lang}}" required>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block" ng-click="doLogin()" ng-disabled="LoginForm.$invalid">
+                        <span ng-bind="'lang.actions.login'|lang"></span>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <a href="#" id="forgot-password-link">
+                        <span ng-bind="'lang.messages.i_fogot_password'|lang"></span>
+                    </a>
+                </div>
             </form>
-
+           
             <!-- -->
             <div id="password-reset-form" style="display: none;"> 
                 <div class="form-signin">
@@ -46,7 +58,9 @@
                     <div class="close">×</div>
                 </div>
                 <form action="index.html" id="password-reset-form_id" novalidate="novalidate" class="form-signin">
-                    <input type="text" class="form-control" ng-model="loginInfo.reset_email" placeholder="{{'lang.email'|lang}}" required>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="loginInfo.reset_email" placeholder="{{'lang.email'|lang}}" required>
+                    </div>
                     <div class="form-actions">
                         <button class="btn btn-lg btn-primary btn-block" type="submit">
                                <span>reset</span>
