@@ -7,7 +7,7 @@
   TMPL_EXCEPTION_FILE: ./server/Tpl/exception.html
   LANG: zh-cn
   - preloadJSDebug:
-    - "vendor/jquery/jquery-2.1.1.min.js"
+    - "vendor/jquery/jquery-2.1.3.min.js"
     - "vendor/angular-1.3.0-rc/angular.min.js"
     - "vendor/bootstrap.min.js"
     - "vendor/angular-1.3.0-rc/angular-resource.min.js"
@@ -21,7 +21,9 @@
     - "vendor/angularModules/ui-utils/ui-utils.min.js"
     - "vendor/angularModules/angular-chosen/chosen.js"
     - "base/config.js"
-    - "vendor/AdminLTE.js"
+    - "vendor/AdminLTE/AdminLTE.js"
+    - "vendor/metisMenu/metisMenu.min.js"
+    - "vendor/sb-admin-2/sb-admin-2.js"
     - "vendor/highcharts/highstock.js" 
     - "vendor/highcharts/ng-highcharts.js"
     - "lib/caches.js"
@@ -46,7 +48,7 @@
     - "vendor/angularModules/ui-utils/ui-utils.min.js"
     - "vendor/angularModules/angular-chosen/chosen.js"
     - "base/config.js"
-    - "vendor/AdminLTE.js"
+    - "vendor/AdminLTE/AdminLTE.js"
     - "lib/caches.js"
     - "lib/plugin.js"
     - "lib/function.js"
