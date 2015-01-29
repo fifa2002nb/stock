@@ -98,7 +98,6 @@
 
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
-                        //$scope.stockData = $scope.fake_stock_data;
                         $scope.stockData = data;
                     });
                 };
