@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>MILES</title>
     <!-- Bootstrap Core CSS -->
     <link href="common/statics/css/bootstrap.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -18,18 +18,9 @@
     <link href="common/vendor/sb-admin-2/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="common/statics/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
-<body ng-controller="MainCtl">
-
+<body ng-controller="MainCtl" ng-keydown="doMainKeyDown($event)">
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -41,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">MILES</a>
+                <a class="navbar-brand" href="/">MILES</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -204,8 +195,8 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#/statistics/list/test">testhtml</a>
-                                    <a ng-click="$root.goPage('statistics/list/test')">test</a>
+                                    <a ng-click="$root.goPage('/')" href="">indexhtml</a>
+                                    <a ng-click="$root.goPage('statistics/list/test')" href="">test</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

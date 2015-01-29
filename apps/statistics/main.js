@@ -7,11 +7,11 @@
                 })
             ;
         }])
-        .factory("StatisticsTestRes", ["$resource",function($resource, cnf){
-            return $resource("/statistics/test/:id.json");
+        .factory("StatisticsTestRes", ["$resource", "ones.config", function($resource, cnf){
+            return $resource(cnf.BSU + "statistics/test/:id.json");
         }])
         .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
-            function($scope, $timeout, ComView, res, $rootScope){
+            function($scope, $timeout, res, $rootScope){
                 $scope.fake_stock_data={
                 "types":["candlestick", "column"],
                 "names":["AAPL", "Volume"],
@@ -98,12 +98,12 @@
 
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
-                        $scope.stockData = $scope.fake_stock_data;
-                        //$scope.stockData = data;
+                        //$scope.stockData = $scope.fake_stock_data;
+                        $scope.stockData = data;
                     });
                 };
-                //doQuery();
-                $scope.stockData = $scope.fake_stock_data;
+                doQuery();
+                //$scope.stockData = $scope.fake_stock_data;
         }])
     ;
 })();
