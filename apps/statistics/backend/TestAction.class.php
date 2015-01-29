@@ -23,12 +23,10 @@ class TestAction extends CommonAction {
             "dateline" => array("BETWEEN", array($starttime, $endtime))
         );
 
-        //$orderModel = D($model);
-        //$orderSourceData = $orderModel->where($map)->select();
-//        echo $orderModel->getLastSql();exit;
-        
-        $data = array();
-        $this->response($data);
+        $Cache = Cache::getInstance('redis', array('host'=>'10.10.100.14', 'port'=>6379, 'expire'=>600));
+        $data = $Cache->get("psostock_5B6A8184141B4EA730FC8C033CD42985");
+        //Log::write('这里记录一下'.$data, "WEB_LOG_DEBUG");
+        $this->response($data, "json_string");
     }
 
 } 

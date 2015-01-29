@@ -29,6 +29,7 @@ class CacheRedis extends Cache {
         if ( !extension_loaded('redis') ) {
             throw_exception(L('_NOT_SUPPERT_').':redis');
         }
+        
         if(empty($options)) {
             $options = array (
                 'host'          => C('REDIS_HOST') ? C('REDIS_HOST') : '127.0.0.1',
@@ -54,10 +55,10 @@ class CacheRedis extends Cache {
      * @param string $name 缓存变量名
      * @return mixed
      */
-    public function get($name) {
+    public function get($name, $decode) {
         N('cache_read',1);
         $value = $this->handler->get($this->options['prefix'].$name);
-        $jsonData  = json_decode( $value, true );
+        $jsonData  = (isset($decode) && true == $decode) ? json_decode( $value, true ) : $value; //modify by xuye
         return ($jsonData === NULL) ? $value : $jsonData;	//检测是否为JSON数据 true 返回JSON解析数组, false返回源数据
     }
 
