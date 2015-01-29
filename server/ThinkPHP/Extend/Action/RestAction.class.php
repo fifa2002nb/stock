@@ -217,7 +217,7 @@ abstract class RestAction {
         header("Expires: 0");
         header("Content-Type: application/json");
 
-        if("json" == $type) //add by xuye
+        if("json_string" == $type) //add by xuye
             echo $data;
         else
             echo json_encode($data);
