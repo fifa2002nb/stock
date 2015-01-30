@@ -148,11 +148,11 @@
                     var yAxis1TitleText = 'OHLC';
                     var yAxis1Height = '40%';
                     var yAxis2TitleText = 'Volume';
-                    var yAxis2Top = '45%';
+                    var yAxis2Top = '40%';
                     var yAxis2Height = '15%';
                     var yAxis3TitleText = 'Balance';
-                    var yAxis3Top = '65%';
-                    var yAxis3Height = '35%';
+                    var yAxis3Top = '55%';
+                    var yAxis3Height = '45%';
                     var series = [];
                     var chartOptions = {};
                     if(attrs.selected){
@@ -190,7 +190,7 @@
                     
                     if (chartOptions) {
                         chartOptions.rangeSelector.selected = selected;
-                        chartOptions.title.text = titleText;
+                        //chartOptions.title.text = titleText;
                         if(2 == chartOptions.yAxis.length){
                             chartOptions.yAxis[0].title.text = yAxis1TitleText;
                             chartOptions.yAxis[0].height = yAxis1Height;
@@ -263,24 +263,17 @@
         angular.module('ngHighcharts').factory('highstock', function() {
             return {
                 defaultOptions: function() {
-                    var groupingUnits = [[
-                        'week',                         // unit name
-                        [1]                             // allowed multiples
-                    ], [
-                        'month',
-                        [1, 2, 3, 4, 6]
-                    ]];
                     return {
                         rangeSelector: {
-                            allButtonsEnabled: true,
+                            //allButtonsEnabled: true,
                             selected: 1
                         },
                         credits: {
                             enabled: false
                         },
-                        title: {
+                        /*title: {
                             text: 'AAPL Historical'
-                        },
+                        },*/
 
                         yAxis: [{
                             title: {
@@ -308,27 +301,18 @@
                         
                         series: [{
                             type: 'candlestick',
-                            name: 'AAPL',
+                            name: 'test1',
                             data: [],
-                            /*dataGrouping: {
-                                units: groupingUnits
-                            }*/
                         }, {
                             type: 'column',
-                            name: 'Volume',
+                            name: 'test2',
                             data: [],
                             yAxis: 1,
-                            /*dataGrouping: {
-                                units: groupingUnits
-                            }*/
                         },{
                             type: 'line',
-                            name: 'Balance',
+                            name: 'test3',
                             data: [],
                             yAxis: 2,
-                            /*dataGrouping: {
-                                units: groupingUnits
-                            }*/
                         }]
                     }
                 }
