@@ -34,6 +34,11 @@
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.stockData = data;
+                        $scope.symbol = data.title;
+                        $scope.now = data.now;
+                        $scope.buyTrigger = data.buyTrigger.toFixed(4);
+                        $scope.sellTrigger = data.sellTrigger.toFixed(4);
+                        $scope.stopLoss = data.stopLoss.toFixed(4);
                     });
                 };
                 doQuery();
