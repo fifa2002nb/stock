@@ -55,6 +55,7 @@
                 }
 
                 scope.$watch('data', function(val) {
+                    alert(val);
                     var temp = [];
                     series = [];
                     xAxisCategories = [];
@@ -145,10 +146,13 @@
                     var selected = 1;
                     var titleText = '';
                     var yAxis1TitleText = 'OHLC';
-                    var yAxis1Height = '60%';
+                    var yAxis1Height = '40%';
                     var yAxis2TitleText = 'Volume';
-                    var yAxis2Top = '65%';
-                    var yAxis2Height = '35%';
+                    var yAxis2Top = '45%';
+                    var yAxis2Height = '15%';
+                    var yAxis3TitleText = 'Balance';
+                    var yAxis3Top = '65%';
+                    var yAxis3Height = '35%';
                     var series = [];
                     var chartOptions = {};
                     if(attrs.selected){
@@ -172,6 +176,16 @@
                     if(attrs.yAxis2Height){
                         yAxis2Height = attrs.yAxis2Height;
                     }
+                    if(attrs.yAxis3TitleText){
+                        yAxis3TitleText = attrs.yAxis3TitleText;
+                    }
+                    if(attrs.yAxis3Top){
+                        yAxis3Top = attrs.yAxis3Top;
+                    }
+                    if(attrs.yAxis3Height){
+                        yAxis3Height = attrs.yAxis3Height;
+                    }
+
                     angular.extend(chartOptions, highstock.defaultOptions(), scope.options);
                     
                     if (chartOptions) {
@@ -186,15 +200,23 @@
                             chartOptions.yAxis[1].height = yAxis2Height;
                             chartOptions.yAxis[1].offset = 0;
                             chartOptions.yAxis[1].lineWidth = 2;
+                            chartOptions.yAxis[2].title.text = yAxis3TitleText;
+                            chartOptions.yAxis[2].top = yAxis3Top;
+                            chartOptions.yAxis[2].height = yAxis3Height;
+                            chartOptions.yAxis[2].offset = 0;
+                            chartOptions.yAxis[2].lineWidth = 2;
+
                         }
                     }
                     scope.chartOptions = chartOptions;
-                    
                     scope.$watch('data', function(val) {
                         var ohlc = [];
                         var volume = [];
+                        var balance = [];
                         var types = val.types;
                         var names = val.names;
+                        if(scope.chartOptions.title)
+                            scope.chartOptions.title.text = val.title;
                         if(val.data && val.data instanceof Array){
                             var dataLength = val.data.length;
                             for (var i = 0; i < dataLength; i++) {
@@ -205,23 +227,29 @@
                                     val.data[i][3], // low
                                     val.data[i][4] // close
                                 ]);
-                              
                                 volume.push([
                                     val.data[i][0], // the date
                                     val.data[i][5] // the volume
-                                ])
+                                ]);
+                                balance.push([
+                                    val.data[i][0],
+                                    val.data[i][6]
+                                ]);
                             }
                     
-                            if (chartOptions && chartOptions.series && 2 == chartOptions.series.length) {
+                            if (chartOptions && chartOptions.series && 3 == chartOptions.series.length) {
                                 chartOptions.series[0].data = ohlc;
                                 chartOptions.series[1].data = volume;
-                                if(types && 2 == types.length){
+                                chartOptions.series[2].data = balance;
+                                if(types && 3 == types.length){
                                     chartOptions.series[0].type = types[0];
                                     chartOptions.series[1].type = types[1];
+                                    chartOptions.series[2].type = types[2];
                                 }
-                                if(names && 2 == names.length){
+                                if(names && 3 == names.length){
                                     chartOptions.series[0].name = names[0];
                                     chartOptions.series[1].name = names[1];
+                                    chartOptions.series[2].name = names[2];
                                 }
                                 element.highcharts('StockChart', chartOptions);
                                 //element.highcharts(chartOptions);
@@ -244,9 +272,12 @@
                     ]];
                     return {
                         rangeSelector: {
+                            allButtonsEnabled: true,
                             selected: 1
                         },
-
+                        credits: {
+                            enabled: false
+                        },
                         title: {
                             text: 'AAPL Historical'
                         },
@@ -255,14 +286,22 @@
                             title: {
                                 text: 'OHLC'
                             },
-                            height: 200,
+                            height: '40%',
                             lineWidth: 2
                         }, {
                             title: {
                                 text: 'Volume'
                             },
-                            top: 300,
-                            height: 100,
+                            top: '45%',
+                            height: '15%',
+                            offset: 0,
+                            lineWidth: 2
+                        },{
+                            title: {
+                                text: 'Balance'
+                            },
+                            top: '65%',
+                            height: '35%',
                             offset: 0,
                             lineWidth: 2
                         }],
@@ -271,17 +310,25 @@
                             type: 'candlestick',
                             name: 'AAPL',
                             data: [],
-                            dataGrouping: {
+                            /*dataGrouping: {
                                 units: groupingUnits
-                            }
+                            }*/
                         }, {
                             type: 'column',
                             name: 'Volume',
                             data: [],
                             yAxis: 1,
-                            dataGrouping: {
+                            /*dataGrouping: {
                                 units: groupingUnits
-                            }
+                            }*/
+                        },{
+                            type: 'line',
+                            name: 'Balance',
+                            data: [],
+                            yAxis: 2,
+                            /*dataGrouping: {
+                                units: groupingUnits
+                            }*/
                         }]
                     }
                 }

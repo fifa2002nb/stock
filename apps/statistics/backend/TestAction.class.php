@@ -24,9 +24,16 @@ class TestAction extends CommonAction {
         );
 
         $Cache = Cache::getInstance('redis', array('host'=>'10.10.100.14', 'port'=>6379, 'expire'=>600));
-        $data = $Cache->get("psostock_5B6A8184141B4EA730FC8C033CD42985");
-        //Log::write('这里记录一下'.$data, "WEB_LOG_DEBUG");
-        $this->response($data, "json_string");
+        $data = $Cache->get("psostock_F4A1A5A86A9F83D818ACC8E4FFCA56F9");
+        $dataarray = json_decode($data, true);
+        /*$newarray = array();
+        for($i = 0; $i < 10; $i++){
+            $newarray["data"][] = $dataarray["data"][$i];
+        }
+        $newarray["types"] = $dataarray["types"];
+        $newarray["names"] = $dataarray["names"];*/
+        //Log::write('xxxxxxxxxxxxxxx_z '.$newarray, "WEB_LOG_DEBUG");
+        $this->response($dataarray);
     }
 
 } 

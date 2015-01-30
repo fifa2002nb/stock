@@ -8,7 +8,7 @@
             ;
         }])
         .factory("StatisticsTestRes", ["$resource", "ones.config", function($resource, cnf){
-            return $resource(cnf.BSU + "statistics/test/:id.json");
+            return $resource(cnf.BSU + "statistics/test/:id.json", {}, {'query':  {method:'GET', isArray:false}});
         }])
         .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
