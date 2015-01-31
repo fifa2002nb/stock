@@ -42,7 +42,7 @@
                     });
                 };
                 doQuery();
-                $('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false});
+                $('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
         }])
         .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
