@@ -42,6 +42,7 @@
                     });
                 };
                 doQuery();
+                $('#dataTables-example').DataTable({responsive: true});
         }])
         .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
