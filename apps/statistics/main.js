@@ -30,7 +30,7 @@
 
                 $scope.stockData = [];
                 $scope.options = {};
-
+                $scope.tradesinfo = [];
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.stockData = data;
@@ -39,10 +39,28 @@
                         $scope.buyTrigger = data.buyTrigger.toFixed(4);
                         $scope.sellTrigger = data.sellTrigger.toFixed(4);
                         $scope.stopLoss = data.stopLoss.toFixed(4);
+                        var tradesLength = data.trades.length;
+                        var trades = [];
+                        for(var i = 0; i < tradesLength; i++){
+                            trades.push({
+                                    "open": data.trades[i][2],
+                                    "close": data.trades[i][3],
+                                    "openPrice": data.trades[i][4],
+                                    "closePrice": data.trades[i][5],
+                                    "type": data.trades[i][6],
+                                    "size": data.trades[i][7],
+                                    "purchase": data.trades[i][8],
+                                    "profit": data.trades[i][9],
+                                    "balance": data.trades[i][10]
+                                });
+                        }
+                        $scope.trades = trades;
+                        $('#myModal').modal('hide');
                     });
                 };
+                $('#myModal').modal({show: true, backdrop: true});
                 doQuery();
-                $('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
+                //$('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
         }])
         .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
