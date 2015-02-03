@@ -32,6 +32,20 @@
                 $scope.options = {};
                 $scope.tradesinfo = [];
                 var doQuery = function () {
+                    $('#myModal').modal({show: true, backdrop: true});
+                    var total=10000;
+                    var breaker=100;
+                    var turn=100/(total/breaker);
+                    var progress=0;
+                    var timer = setInterval(function(){
+                                progress=progress+turn;
+                                $("#aa").html("loading..." + progress + "%");
+                                $("#processbar").attr("style", "width:" + progress + "%");
+                                if (progress>=100) {
+                                    clearInterval(timer);
+                                }
+                            }, breaker);
+
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.stockData = data;
                         $scope.symbol = data.title;
@@ -56,22 +70,12 @@
                         }
                         $scope.trades = trades;
                         $('#myModal').modal('hide');
+                        timer.clearInterval(timer);
                     });
                 };
-                $('#myModal').modal({show: true, backdrop: true});
-                //progress process
-                var total=10000;
-                var breaker=100;
-                var turn=100/(total/breaker);
-                var progress=0;
-                var timer = setInterval(function(){
-                                progress=progress+turn;
-                                $("#aa").html("loading..." + progress + "%");
-                                $("#processbar").attr("style", "width:" + progress + "%");
-                                if (progress>=100) {
-                                    clearInterval(timer);
-                                }
-                            }, breaker);
+                $scope.refresh = function () {
+                    doQuery();
+                };  
                 doQuery();
                 //$('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
         }])
