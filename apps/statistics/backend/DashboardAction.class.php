@@ -23,7 +23,7 @@ class DashboardAction extends CommonAction {
         );
 
         $Cache = Cache::getInstance('redis', array('host'=>'10.10.100.14', 'port'=>6379, 'expire'=>600));
-        $data = $Cache->get("psostock_9AB6BB948DDFC779E48AF62724DC6815");
+        $data = $Cache->get("psostock_00750244AD67024AD7AAD529EDBEB056");
         $dataarray = json_decode($data, true);
         $this->response($dataarray);
     }

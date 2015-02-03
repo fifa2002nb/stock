@@ -194,14 +194,7 @@
                             <a ng-click="$root.goPage('statistics/list/dashboard')" href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a ng-click="$root.goPage('/')" href="">indexhtml</a>
-                                    <a ng-click="$root.goPage('statistics/list/test')" href="">test</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href=""><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
@@ -210,13 +203,7 @@
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Panels and Wells</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements</a>
                         </li>
                     </ul>
                 </div>
@@ -226,16 +213,9 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div ng-view></div>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-           
+            <div ng-view></div>
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
 </body>
