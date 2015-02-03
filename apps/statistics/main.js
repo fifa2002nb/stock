@@ -59,6 +59,19 @@
                     });
                 };
                 $('#myModal').modal({show: true, backdrop: true});
+                //progress process
+                var total=10000;
+                var breaker=100;
+                var turn=100/(total/breaker);
+                var progress=0;
+                var timer = setInterval(function(){
+                                progress=progress+turn;
+                                $("#aa").html("loading..." + progress + "%");
+                                $("#processbar").attr("style", "width:" + progress + "%");
+                                if (progress>=100) {
+                                    clearInterval(timer);
+                                }
+                            }, breaker);
                 doQuery();
                 //$('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
         }])
