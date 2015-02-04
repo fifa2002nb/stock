@@ -6,7 +6,7 @@
         "overview": {
             "icon": "bar-chart-o",
             "childs" : {
-                "App overview": "overview/list/xxx",
+                "App overview": "overview/list/xxx"
             }
         }
     }
