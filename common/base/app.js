@@ -336,7 +336,9 @@
             }])
         .run(["$rootScope", "$http", "$injector", "$location", function($rootScope, $http, $injector, $location) {
                 if($location.absUrl().indexOf("Forecast") > 0 )
-                    $location.url('statistics/list/dashboard');        
+                    $location.url('statistics/list/dashboard');   
+                else if($location.absUrl().indexOf("Index") > 0)
+                    $location.url('overview/list/overview');
             }])
     ;
 })();
