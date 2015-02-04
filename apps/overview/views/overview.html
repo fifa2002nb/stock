@@ -1,0 +1,47 @@
+<div class="navbar-right">
+    <button type="button" class="btn btn-default">+ new APP</button>
+<h1 class="page-header">
+    APP overview（last 30 minutes）
+</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               trades 
+            </div>
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>open</th>
+                                <th>close</th>
+                                <th>openPrice</th>
+                                <th>closePrice</th>
+                                <th>type</th>
+                                <th>size</th>
+                                <th>purchase</th>
+                                <th>profit</th>
+                                <th>balance</th>
+                            </tr>
+                        <thead>
+                        <tbody>
+                            <tr class="gradeA" ng-repeat="trade in trades">
+                                <td>{{trade.open}}</td>
+                                <td>{{trade.close}}</td>
+                                <td>{{trade.openPrice}}</td>
+                                <td>{{trade.closePrice}}</td>
+                                <td>{{trade.type}}</td>
+                                <td>{{trade.size}}</td>
+                                <td>{{trade.purchase}}</td>
+                                <td>{{trade.profit}}</td>
+                                <td>{{trade.balance}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

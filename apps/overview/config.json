@@ -1,0 +1,13 @@
+{
+    "alias": "overview",
+    "version": "0.1",
+    "requirements": [],
+    "navs": {
+        "overview": {
+            "icon": "bar-chart-o",
+            "childs" : {
+                "App overview": "overview/list/xxx",
+            }
+        }
+    }
+}
