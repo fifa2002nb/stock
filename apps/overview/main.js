@@ -41,6 +41,18 @@
             function($scope, $timeout, res, $rootScope){
                 $('#rootwizard').bootstrapWizard({'tabClass': 'nav nav-tabs', onTabClick: function(tab, navigation, index) {
                     return false;
+                }, onTabShow: function(tab, navigation, index) {
+                    var $total = navigation.find('li').length;
+                    var $current = index + 1;
+                    if($current >= $total) {
+                        $('#rootwizard').find('.pager .next').hide();
+                        $('#rootwizard').find('.pager .finish').show();
+                        $('#rootwizard').find('.pager .finish').removeClass('disabled');
+                    }
+                    else{
+                        $('#rootwizard').find('.pager .next').show();
+                        $('#rootwizard').find('.pager .finish').hide();
+                    }
                 }});
         }])
 
