@@ -5,6 +5,11 @@
                     templateUrl: appView('overview.html', "overview"),
                     controller: "OverviewOverviewCtl"
                 })
+                .when('/overview/list/newapp', {
+                    templateUrl: appView('newapp.html', "overview"),
+                    controller: "OverviewNewappCtl"
+                })
+
             ;
         }])
         .factory("OverviewOverviewRes", ["$resource", "ones.config", function($resource, cnf){
@@ -26,19 +31,15 @@
                 $scope.tradesinfo = [];
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
-                        $scope.stockData = data;
-                        $scope.symbol = data.title;
-                        $scope.now = data.now;
-                        $scope.commission = data.commission;
-                        $scope.buyTrigger = data.buyTrigger.toFixed(4);
-                        $scope.sellTrigger = data.sellTrigger.toFixed(4);
-                        $scope.stopLoss = data.stopLoss.toFixed(4);
-                        var tradesLength = data.trades.length;
                         var trades = [];
                         $scope.trades = trades;
                     });
                 };
                 doQuery();
         }])
+        .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
+            function($scope, $timeout, res, $rootScope){
+        }])
+
     ;
 })();
