@@ -39,7 +39,9 @@
         }])
         .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
-                $('#rootwizard').bootstrapWizard({'tabClass': 'nav nav-pills'});
+                $('#rootwizard').bootstrapWizard({'tabClass': 'nav nav-pills', onTabClick: function(tab, navigation, index) {
+                    return false;
+                }});
         }])
 
     ;
