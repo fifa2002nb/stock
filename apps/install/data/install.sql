@@ -385,3 +385,18 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__workflow_process` (
   KEY `workflow_id` (`workflow_id`,`node_id`,`start_time`,`end_time`,`status`,`user_id`),
   KEY `mainrow_id` (`mainrow_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- separator
+
+CREATE TABLE IF NOT EXISTS `__PREFIX__constant_task` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `symbol` char(32) NOT NULL,
+  `market` char(32) NOT NULL,
+  `frequency` int(11) NOT NULL,
+  `create_time` datetime NOT NULL,
+  `expire_time` datetime NOT NULL,
+  `status` enum('running','paused','complete','deleted') NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
