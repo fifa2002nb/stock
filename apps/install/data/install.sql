@@ -393,6 +393,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__constant_task` (
   `symbol` char(32) NOT NULL,
   `market` char(32) NOT NULL,
   `frequency` int(11) NOT NULL,
+  `computedays` int(11) NOT NULL, 
   `create_time` datetime NOT NULL,
   `expire_time` datetime NOT NULL,
   `status` enum('running','paused','complete','deleted') NOT NULL,
