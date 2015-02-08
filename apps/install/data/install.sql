@@ -390,6 +390,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__workflow_process` (
 
 CREATE TABLE IF NOT EXISTS `__PREFIX__constant_task` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `taskname` char(32) NOT NULL,
   `symbol` char(32) NOT NULL,
   `market` char(32) NOT NULL,
   `frequency` int(11) NOT NULL,
