@@ -20,14 +20,7 @@
         }])
         .controller("OverviewOverviewCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
-                //变量预设
-                var startTime = new Date();
-                var endTime = new Date();
-                startTime.setMonth(startTime.getMonth()-1);
                 $scope.filterFormData = $scope.filterFormData || {};
-                $scope.filterFormData._filter_start_dateline = startTime;
-                $scope.filterFormData._filter_end_dateline = endTime;
-                $scope.filterFormData._filter_timeStep = 60;
                 if(ones.userInfo){
                     $scope.filterFormData.uid = ones.userInfo.id;
                 }
@@ -39,10 +32,6 @@
                 $scope.tradesinfo = [];
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
-                        if(0 < data.length){
-                            firstobj = data[0];
-                            alert(firstobj.id + "|" + firstobj.taskname + "|" + firstobj.symbol + "|" + firstobj.market + "|" + firstobj.computedays + "|" + firstobj.create_time + "|" + firstobj.expire_time + "|" + firstobj.status);
-                        }
                         $scope.tasks = data;
                     });
                 };
