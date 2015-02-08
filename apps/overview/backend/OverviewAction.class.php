@@ -12,19 +12,16 @@ class OverviewAction extends CommonAction {
      * 支持：当日，当月，当年，日期开始-》结束
      * **/
     public function index() {
-
-        $quick = $_GET["_filter_timeStep"];
         $starttime = strtotime($_GET["_filter_start_dateline"]);
         $endtime = strtotime($_GET["_filter_end_dateline"]);
+        $uid = intval($_GET["uid"]);
 
-        $map = array(
-            "status" => array("EGT", 1),
-            "dateline" => array("BETWEEN", array($starttime, $endtime))
-        );
-
-        $Cache = Cache::getInstance('redis', array('host'=>'10.10.100.14', 'port'=>6379, 'expire'=>600));
-        $data = $Cache->get("psostock_00750244AD67024AD7AAD529EDBEB056");
-        $dataarray = json_decode($data, true);
+        $constantTask = M("Constant_task");
+        $list = $constantTask->where("user_id = $uid")->select();
+        //Log::write('xxxxxxxxxxxxxxx_z '.var_dump($list), "WEB_LOG_DEBUG"); 
+         
+        //$dataarray = array("id" => $uid, "length" => count($list), "create_time" => $list[0]["create_time"]);
+        $dataarray = $list;
         $this->response($dataarray);
     }
 

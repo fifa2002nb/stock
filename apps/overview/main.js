@@ -13,7 +13,10 @@
             ;
         }])
         .factory("OverviewOverviewRes", ["$resource", "ones.config", function($resource, cnf){
-            return $resource(cnf.BSU + "overview/overview/:id.json", {}, {'query':  {method:'GET', isArray:false}});
+            return $resource(cnf.BSU + "overview/overview/:id.json", {}, {
+                'query':  {method: 'GET', isArray: true},
+                'update': {method: 'PUT'}
+            });
         }])
         .controller("OverviewOverviewCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
             function($scope, $timeout, res, $rootScope){
@@ -25,14 +28,22 @@
                 $scope.filterFormData._filter_start_dateline = startTime;
                 $scope.filterFormData._filter_end_dateline = endTime;
                 $scope.filterFormData._filter_timeStep = 60;
+                if(ones.userInfo){
+                    $scope.filterFormData.uid = ones.userInfo.id;
+                }
+                else
+                    $scope.filterFormData.uid = -1;
 
                 $scope.stockData = [];
                 $scope.options = {};
                 $scope.tradesinfo = [];
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
-                        var trades = [];
-                        $scope.trades = trades;
+                        if(0 < data.length){
+                            firstobj = data[0];
+                            alert(firstobj.id + "|" + firstobj.taskname + "|" + firstobj.symbol + "|" + firstobj.market + "|" + firstobj.computedays + "|" + firstobj.create_time + "|" + firstobj.expire_time + "|" + firstobj.status);
+                        }
+                        $scope.tasks = data;
                     });
                 };
                 doQuery();
