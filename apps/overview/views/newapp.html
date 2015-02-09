@@ -59,19 +59,19 @@
                                         <div class="col-sm-5">
                                             <div class="btn-group" data-toggle="buttons">
                                                 <label class="btn btn-default active">
-                                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> 1 minute
+                                                    <input type="radio" name="options" value="1" ng-model="freq" checked> 1 minute
                                                 </label>
                                                 <label class="btn btn-default">
-                                                    <input type="radio" name="options" id="option2" autocomplete="off"> 10 minutes
+                                                    <input type="radio" name="options" value="10" ng-model="freq"> 10 minutes
                                                 </label>
                                                 <label class="btn btn-default">
-                                                    <input type="radio" name="options" id="option3" autocomplete="off"> 30 minutes
+                                                    <input type="radio" name="options" value="30" ng-model="freq"> 30 minutes
                                                 </label>
                                                 <label class="btn btn-default">
-                                                    <input type="radio" name="options" id="option4" autocomplete="off"> 60 minutes
+                                                    <input type="radio" name="options" value="60" ng-model="freq"> 60 minutes
                                                 </label>
                                                 <label class="btn btn-default">
-                                                    <input type="radio" name="options" id="option5" autocomplete="off"> 1 day
+                                                    <input type="radio" name="options" value="3600" ng-model="freq"> 1 day
                                                 </label>
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@
                             </div>
                             <ul class="pager wizard">
                                 <li class="previous"><a href="">Previous</a></li>
-                                <li class="next"><a href="" ng-click="submit()">Next</a></li>
+                                <li class="next"><a href="">Next</a></li>
                                 <li class="next finish" style="display:none;"><a href="" ng-click="submit()">Finish</a></li>
                             </ul>
                         </div>  

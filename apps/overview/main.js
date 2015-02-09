@@ -71,8 +71,12 @@
                         }
                     },
                     onFinish: function(tab, navigation, index){
+                        alert($scope.frequency);
                     }
                 });
+            $scope.submit = function(){
+                alert($scope.appname + "|" + $scope.stocksymbol + "|" + $scope.market + "|" + $scope.freq + "|" + $scope.frequency);
+            }
         }])
     ;
 })();
