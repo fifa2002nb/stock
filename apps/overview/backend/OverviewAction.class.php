@@ -7,22 +7,49 @@
 
 class OverviewAction extends CommonAction {
 
-    /*
-     * 根据日期查看
-     * 支持：当日，当月，当年，日期开始-》结束
-     * **/
     public function index() {
-        $starttime = strtotime($_GET["_filter_start_dateline"]);
-        $endtime = strtotime($_GET["_filter_end_dateline"]);
         $uid = intval($_GET["uid"]);
+        $constantTask = M("Constant_task");
+        $list = $constantTask->where("user_id = $uid")->select();
+        $this->response($list);
+    }
+
+    public function update(){
+        $putData = $_POST;
+        $uid = abs(intval($_GET["id"]));
+        $taskname = htmlspecialchars($putData["appname"]);
+        $symbol = htmlspecialchars($putData["stocksymbol"]);
+        $market = htmlspecialchars($putData["market"]);
+        $frequency = abs(intval($putData["freq"]));
+        $computedays = 12;
+        $create_time = date("Y-m-d H:i:s", time()); 
+        $expire_time = date("Y-m-d H:i:s", time() + 86400 * 365);
+        $status = "running";
+        $user_id = $uid;
 
         $constantTask = M("Constant_task");
         $list = $constantTask->where("user_id = $uid")->select();
-        //Log::write('xxxxxxxxxxxxxxx_z '.var_dump($list), "WEB_LOG_DEBUG"); 
-         
-        //$dataarray = array("id" => $uid, "length" => count($list), "create_time" => $list[0]["create_time"]);
-        $dataarray = $list;
-        $this->response($dataarray);
-    }
+        $isduplicated = false;
+        foreach($list as $index => $data){
+            if($data["taskname"] == $taskname || $data["symbol"] == $symbol){
+                $this->response(array("error" => "app重复创建"));
+                return;
+            }
+        }
+        //Log::write('xxxxxxxxxxxxxxx_z '.$taskname."|".$symbol."|".$market."|".$frequency."|".$computedays."|".$create_time."|".$expire_time."|".$status."|".$user_id, "WEB_LOG_DEBUG");
+        unset($data["id"]);
+        $data["taskname"] = $taskname;
+        $data["symbol"] = $symbol;
+        $data["market"] = $market;
+        $data["frequency"] = $frequency;
+        $data["computedays"] = $computedays;
+        $data["create_time"] = $create_time;
+        $data["expire_time"] = $expire_time;
+        $data["status"] = $status;
+        $data["user_id"] = $user_id;
 
+        $constantTask->create($data);
+        $constantTask->add();
+        $this->response(array("message" => "success"));
+    }
 } 

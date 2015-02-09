@@ -5,15 +5,14 @@
                     templateUrl: appView('overview.html', "overview"),
                     controller: "OverviewOverviewCtl"
                 })
-                .when('/overview/list/newapp', {
+                .when('/overview/put/newapp', {
                     templateUrl: appView('newapp.html', "overview"),
                     controller: "OverviewNewappCtl"
                 })
-
             ;
         }])
         .factory("OverviewOverviewRes", ["$resource", "ones.config", function($resource, cnf){
-            return $resource(cnf.BSU + "overview/overview/:id.json", {}, {
+            return $resource(cnf.BSU + "overview/overview/:id.json", null, {
                 'query':  {method: 'GET', isArray: true},
                 'update': {method: 'PUT'}
             });
@@ -37,8 +36,8 @@
                 };
                 doQuery();
         }])
-        .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
-            function($scope, $timeout, res, $rootScope){
+        .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", "$location", 
+            function($scope, $timeout, res, $rootScope, $location){
                 $('#rootwizard').bootstrapWizard({'tabClass': 'nav nav-tabs', 
                     onTabClick: function(tab, navigation, index) {
                         return false;
@@ -70,13 +69,24 @@
                             return false;
                         }
                     },
-                    onFinish: function(tab, navigation, index){
-                        alert($scope.frequency);
-                    }
                 });
-            $scope.submit = function(){
-                alert($scope.appname + "|" + $scope.stocksymbol + "|" + $scope.market + "|" + $scope.freq + "|" + $scope.frequency);
-            }
+                $scope.submit = function(){
+                    if(!$scope.freq){
+                        alert("frequency is required.");
+                    }
+                    else{
+                        $scope.newappFormData = $scope.newappFormData || {};
+                        $scope.newappFormData.appname = $scope.appname;
+                        $scope.newappFormData.stocksymbol = $scope.stocksymbol;
+                        $scope.newappFormData.market = $scope.market;
+                        $scope.newappFormData.freq = $scope.freq;
+                        res.update({id: ones.userInfo.id}, $scope.newappFormData).$promise.then(function(data){
+                            if(data.error)
+                                alert(data.error);
+                            $location.url("/overview/list/overview");
+                        });
+                    }
+                };
         }])
     ;
 })();
