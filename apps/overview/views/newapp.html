@@ -26,26 +26,26 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">app name</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" placeholder="please input app name" class="required">
+                                            <input type="text" class="form-control" ng-model="appname" placeholder="please input app name" class="required">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">stock symbol</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" placeholder="please input stock symbol" class="required">
+                                            <input type="text" class="form-control" ng-model="stocksymbol" placeholder="please input stock symbol" class="required">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label radio"></label>
                                         <div class="col-sm-5">
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            <input type="radio" name="optionsRadios" value="china" ng-model="market" checked>
                                             china market 
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label radio"></label>
                                         <div class="col-sm-5">
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            <input type="radio" name="optionsRadios" value="usa" ng-model="market">
                                             usa market
                                         </div>
                                     </div>
@@ -80,8 +80,8 @@
                             </div>
                             <ul class="pager wizard">
                                 <li class="previous"><a href="">Previous</a></li>
-                                <li class="next"><a href="">Next</a></li>
-                                <li class="next finish" style="display:none;"><a href="">Finish</a></li>
+                                <li class="next"><a href="" ng-click="submit()">Next</a></li>
+                                <li class="next finish" style="display:none;"><a href="" ng-click="submit()">Finish</a></li>
                             </ul>
                         </div>  
                     </div>
