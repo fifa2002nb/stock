@@ -27,8 +27,15 @@ class OverviewAction extends CommonAction {
         $status = "running";
         $user_id = $uid;
 
+        //验证股票代号
+        $stocksInfo = M("stocks_info");
+        $stockinfo = $stocksInfo->where("symbol=$symbol and market=$market")->select();
+        if(0 == count($stockinfo)){
+            $this->response(array("error" => "股票代号错误"));
+            return;
+        }
         $constantTask = M("Constant_task");
-        $list = $constantTask->where("user_id = $uid")->select();
+        $list = $constantTask->where("user_id=$uid")->select();
         $isduplicated = false;
         foreach($list as $index => $data){
             if($data["taskname"] == $taskname || $data["symbol"] == $symbol){
