@@ -402,3 +402,13 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__constant_task` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--separator
+
+CREATE TABLE IF NOT EXISTS `__PREFIX__stocks_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `symbol` char(32) NOT NULL,
+  `market` char(32) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `stock_id` (`symbol`, `market`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
