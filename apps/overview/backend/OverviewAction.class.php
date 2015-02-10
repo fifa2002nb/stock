@@ -18,7 +18,7 @@ class OverviewAction extends CommonAction {
         $putData = $_POST;
         $uid = abs(intval($_GET["id"]));
         $taskname = htmlspecialchars($putData["appname"]);
-        $symbol = htmlspecialchars($putData["stocksymbol"]);
+        $symbol = strtoupper(htmlspecialchars($putData["stocksymbol"]));
         $market = htmlspecialchars($putData["market"]);
         $frequency = abs(intval($putData["freq"]));
         $computedays = 12;
@@ -37,6 +37,11 @@ class OverviewAction extends CommonAction {
         $constantTask = M("Constant_task");
         $list = $constantTask->where("user_id=$uid")->select();
         $isduplicated = false;
+        //测试阶段每个用户只允许拥有一个任务
+        if(0 < count($list)){
+            $this->response(array("error" => "测试阶段每个用户只允许拥有一个任务"));
+            return;
+        }
         foreach($list as $index => $data){
             if($data["taskname"] == $taskname || $data["symbol"] == $symbol){
                 $this->response(array("error" => "app重复创建"));
@@ -57,6 +62,18 @@ class OverviewAction extends CommonAction {
 
         $constantTask->create($data);
         $constantTask->add();
+        
+        //refresh task distribution module
+        $url = "http://115.231.98.85:8456/developerfcgi?refresh_tasks";
+        request_get($url);
+
         $this->response(array("message" => "success"));
+    }
+
+    public function delete(){
+        $deleteData = $_POST;
+        $uid = abs(intval($_GET["id"]));
+        $taskname = htmlspecialchars($deleteData["appname"]);
+        $this->response(array("message" => "delete $uid:$taskname succ"));
     }
 } 

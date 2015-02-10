@@ -14,11 +14,17 @@
         .factory("OverviewOverviewRes", ["$resource", "ones.config", function($resource, cnf){
             return $resource(cnf.BSU + "overview/overview/:id.json", null, {
                 'query':  {method: 'GET', isArray: true},
-                'update': {method: 'PUT'}
+                'update': {method: 'PUT'},
+                'remove': {method: 'DELETE'}
             });
         }])
-        .controller("OverviewOverviewCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", 
-            function($scope, $timeout, res, $rootScope){
+        .factory("OverviewDeleteRes", ["$resource", "ones.config", function($resource, cnf){
+            return $resource(cnf.BSU + "overview/delapp/:id.json", null, {
+                'update': {method: 'PUT'},
+            });
+        }])
+        .controller("OverviewOverviewCtl", ["$scope", "$timeout", "OverviewOverviewRes", "OverviewDeleteRes", "$rootScope",
+            function($scope, $timeout, res, delres, $rootScope){
                 $scope.filterFormData = $scope.filterFormData || {};
                 if(ones.userInfo){
                     $scope.filterFormData.uid = ones.userInfo.id;
@@ -32,6 +38,12 @@
                 var doQuery = function () {
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.tasks = data;
+                    });
+                };
+                $scope.remove = function(taskname){
+                    delres.update({id: ones.userInfo.id}, {appname: taskname}).$promise.then(function(data){
+                        alert(data.message);
+                        window.location.reload();
                     });
                 };
                 doQuery();

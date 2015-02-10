@@ -5,6 +5,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+function request_get($url){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $output = curl_exec($ch);
+    $error = curl_error($ch);
+    curl_close($ch);
+    return $error ? $error : $output;
+}
 
 function getPwd($source) {
     return md5($source);

@@ -23,6 +23,7 @@
                                 <td>symbol</td>
                                 <td>market</td>
                                 <td>status</td>
+                                <td>expire</td>
                                 <td>settings</td>
                             </tr>
 
@@ -31,15 +32,16 @@
                                 <td>{{task.symbol}}</td>
                                 <td>{{task.market}}</td>
                                 <td>{{task.status}}</td>
+                                <td>{{task.expire_time}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
                                             oprations<span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">stop</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">restart</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">remove</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">stop</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">restart</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="" ng-click='remove("{{task.taskname}}")'>remove</a></li>
                                         </ul>
                                     </div>
 
