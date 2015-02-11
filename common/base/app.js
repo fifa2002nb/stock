@@ -337,9 +337,9 @@
         .run(["$rootScope", "$http", "$injector", "$location", function($rootScope, $http, $injector, $location) {
                 if($location.absUrl().indexOf("Forecast") > 0 && "" == $location.path())
                     $location.url('statistics/list/dashboard/null');   
-                else if($location.absUrl().indexOf("Index") > 0)
+                else if("" == $location.path())
                     $location.url('overview/list/overview');
-                else
+                else if($location.absUrl().indexOf("Index") > 0)
                     $location.url('overview/list/overview');
             }])
     ;
