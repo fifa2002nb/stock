@@ -31,8 +31,12 @@
                 $scope.options = {};
                 $scope.tradesinfo = [];
                 var doQuery = function () {
+                    angular.element('#loading').show();
+                    angular.element('#newapp').hide();
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.tasks = data;
+                        angular.element('#newapp').show();
+                        angular.element('#loading').hide();
                     });
                 };
                 $scope.remove = function(taskname){

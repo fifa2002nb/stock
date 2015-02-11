@@ -3,7 +3,15 @@
         <h3 class="page-header">
             APP overview（last 30 minutes）
             <div class="navbar-right">
-                <button type="button" class="btn btn-default" ng-click="$root.goPage('overview/put/newapp')">+ new APP</button>
+                <button type="button" class="btn btn-default" ng-click="$root.goPage('overview/put/newapp')">
+                    <div id="newapp">
+                        + new APP
+                    </div>
+                    <div id="loading">
+                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> 
+                        Loading...
+                    </div>
+                </button>
             </div>
         </h3>
     </div>
