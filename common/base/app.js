@@ -335,9 +335,11 @@
                 $scope.userInfo = ones.userInfo;
             }])
         .run(["$rootScope", "$http", "$injector", "$location", function($rootScope, $http, $injector, $location) {
-                if($location.absUrl().indexOf("Forecast") > 0 )
-                    $location.url('statistics/list/dashboard');   
+                if($location.absUrl().indexOf("Forecast") > 0 && "" == $location.path())
+                    $location.url('statistics/list/dashboard/null');   
                 else if($location.absUrl().indexOf("Index") > 0)
+                    $location.url('overview/list/overview');
+                else
                     $location.url('overview/list/overview');
             }])
     ;
