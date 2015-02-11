@@ -5,6 +5,10 @@
                     templateUrl: appView('dashboard.html', "statistics"),
                     controller: "StatisticsDashboardCtl"
                 })
+                .when('/statistics/list/details', {
+                    template: '<div class="row"><div class="col-xs-12"></div></div>',
+                    controller: "StatisticsDetailsCtl"
+                })
             ;
         }])
         .factory("StatisticsDashboardRes", ["$resource", "ones.config", function($resource, cnf){
@@ -12,29 +16,15 @@
         }])
         .controller("StatisticsDashboardCtl", ["$scope", "$timeout", "StatisticsDashboardRes", "$rootScope", "$routeParams",
             function($scope, $timeout, res, $rootScope, $routeParams){
+                
                 $scope.filterFormData = $scope.filterFormData || {};
                 $scope.filterFormData.taskname = $routeParams.taskname;
-                if(ones.userInfo)
-                    $scope.filterFormData.uid = ones.userInfo.id;
-                else
-                    $scope.filterFormData.uid = -1;
-
+                $scope.filterFormData.uid = (ones.userInfo) ? ones.userInfo.id : -1;
                 $scope.stockData = [];
                 var doQuery = function () {
-                    $('#myModal').modal({show: true, backdrop: true});
-                    var total=10000;
-                    var breaker=100;
-                    var turn=100/(total/breaker);
-                    var progress=0;
-                    var timer = setInterval(function(){
-                                progress=progress+turn;
-                                $("#aa").html("loading..." + progress + "%");
-                                $("#processbar").attr("style", "width:" + progress + "%");
-                                if (progress>=100) {
-                                    clearInterval(timer);
-                                }
-                            }, breaker);
-                   
+                    //$scope.isloading = true;
+                    angular.element('#refresh').hide();
+                    angular.element('#loading').show();
                     res.query($scope.filterFormData).$promise.then(function(data){
                         $scope.stockData = data;
                         $scope.symbol = data.title;
@@ -61,9 +51,9 @@
                             }
                             $scope.trades = trades;
                         }
-                        $('#myModal').modal('hide');
-                        if(timer)
-                            clearInterval(timer);
+                        //$scope.isloading = false;
+                        angular.element('#refresh').show();
+                        angular.element('#loading').hide();
                     });
                 };
                 $scope.refresh = function () {
@@ -71,27 +61,12 @@
                 };  
                 doQuery();
                 //$('#dataTables-example').DataTable({"bLengthChange": false, "bFilter": false, "bAutoWidth": true});
-        }])
-        .controller("StatisticsTestCtl", ["$scope", "$timeout", "StatisticsTestRes", "$rootScope", 
-            function($scope, $timeout, res, $rootScope){
-                //变量预设
-                var startTime = new Date();
-                var endTime = new Date();
-                startTime.setMonth(startTime.getMonth()-1);
-                $scope.filterFormData = $scope.filterFormData || {};
-                $scope.filterFormData._filter_start_dateline = startTime;
-                $scope.filterFormData._filter_end_dateline = endTime;
-                $scope.filterFormData._filter_timeStep = 60;
-
-                $scope.stockData = [];
-
-                var doQuery = function () {
-                    res.query($scope.filterFormData).$promise.then(function(data){
-                        $scope.stockData = data;
-                    });
-                };
-                doQuery();
-                //$scope.stockData = $scope.fake_stock_data;
-        }])
+            }
+        ])
+        .controller("StatisticsDetailsCtl", ["$scope", "$timeout", "$rootScope", 
+            function($scope, $timeout, $rootScope){
+                alert("building..");
+            }
+        ])
     ;
 })();
