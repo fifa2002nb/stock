@@ -122,8 +122,6 @@ if($ext == "json") {
     define("CURRENT_MODULE", ucfirst($module));
 }
 
-//print_r(routeMaker($k, $action));exit;
 
 unset($null, $tmp, $groupMap, $k, $action, $hasRule, $ext);
-//print_r($urlRoutes);
 return $urlRoutes;
