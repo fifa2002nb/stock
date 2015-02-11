@@ -26,12 +26,7 @@
         .controller("OverviewOverviewCtl", ["$scope", "$timeout", "OverviewOverviewRes", "OverviewDeleteRes", "$rootScope",
             function($scope, $timeout, res, delres, $rootScope){
                 $scope.filterFormData = $scope.filterFormData || {};
-                if(ones.userInfo){
-                    $scope.filterFormData.uid = ones.userInfo.id;
-                }
-                else
-                    $scope.filterFormData.uid = -1;
-
+                $scope.filterFormData.uid = (ones.userInfo) ? ones.userInfo.id : -1;
                 $scope.stockData = [];
                 $scope.options = {};
                 $scope.tradesinfo = [];
@@ -46,6 +41,9 @@
                         window.location.reload();
                     });
                 };
+                $scope.detals = function(taskname){
+                    alert(taskname);
+                }
                 doQuery();
         }])
         .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", "$location", 

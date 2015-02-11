@@ -38,8 +38,8 @@ class OverviewAction extends CommonAction {
         $list = $constantTask->where("user_id=$uid")->select();
         $isduplicated = false;
         //测试阶段每个用户只允许拥有一个任务
-        if(0 < count($list)){
-            $this->response(array("error" => "测试阶段每个用户只允许拥有一个任务"));
+        if(1 < count($list)){
+            $this->response(array("error" => "测试阶段每个用户只允许拥有两个任务"));
             return;
         }
         foreach($list as $index => $data){
@@ -64,7 +64,7 @@ class OverviewAction extends CommonAction {
         $constantTask->add();
         
         //refresh task distribution module
-        $url = "http://115.231.98.85:8456/developerfcgi?refresh_tasks";
+        $url = "http://www.mtrix.io:8456/developerfcgi?refresh_tasks";
         request_get($url);
 
         $this->response(array("message" => "success"));

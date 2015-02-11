@@ -17,7 +17,7 @@ class DelappAction extends CommonAction {
         $res = $constantTask->where("taskname=\"$taskname\" and user_id=$uid")->delete();
         
         //refresh the task distribution module
-        $url = "http://115.231.98.85:8456/developerfcgi?refresh_tasks";
+        $url = "http://www.mtrix.io:8456/developerfcgi?refresh_tasks";
         request_get($url);
         
         $this->response(array("message" => "delete $taskname succ $res"));
