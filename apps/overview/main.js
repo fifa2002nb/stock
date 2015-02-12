@@ -54,7 +54,7 @@
         }])
         .controller("OverviewNewappCtl", ["$scope", "$timeout", "OverviewOverviewRes", "$rootScope", "$location", 
             function($scope, $timeout, res, $rootScope, $location){
-                angular.element('#loading').hide();
+                angular.element('#newapploading').hide();
                 $('#rootwizard').bootstrapWizard({'tabClass': 'nav nav-tabs', 
                     onTabClick: function(tab, navigation, index) {
                         return false;
@@ -97,7 +97,7 @@
                         $scope.newappFormData.stocksymbol = $scope.stocksymbol;
                         $scope.newappFormData.market = $scope.market;
                         $scope.newappFormData.freq = $scope.freq;
-                        angular.element('#loading').show();
+                        angular.element('#newapploading').show();
                         angular.element('#return').hide();
                         res.update({id: ones.userInfo.id}, $scope.newappFormData).$promise.then(function(data){
                             if(data.error)
