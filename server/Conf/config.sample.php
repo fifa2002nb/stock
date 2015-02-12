@@ -31,7 +31,6 @@ $BASEConfig = array(
     'URL_MODEL' => 0,
     'URL_ROUTE_RULES' => require "route.php",
 
-
     /**
      * AUTH 权限控制
      */
@@ -50,7 +49,9 @@ $BASEConfig = array(
             "passport.login.read",
             "home.frontendruntime.read",
             "home.install.read",
-            "home.index.read"
+            "home.index.read",
+            "home.overview.read",
+            "home.forecast.read"
         ),
         /**
          * 无需认证模块
