@@ -40,6 +40,8 @@
                     });
                 };
                 $scope.remove = function(taskname){
+                    angular.element('#loading').show();
+                    angular.element('#newapp').hide();
                     delres.update({id: ones.userInfo.id}, {appname: taskname}).$promise.then(function(data){
                         alert(data.message);
                         window.location.reload();
@@ -100,8 +102,6 @@
                         res.update({id: ones.userInfo.id}, $scope.newappFormData).$promise.then(function(data){
                             if(data.error)
                                 alert(data.error);
-                            angular.element('#return').show();
-                            angular.element('#loading').hide();
                             $location.url("/overview/list/overview");
                         });
                     }
