@@ -2,131 +2,457 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flati | responsive html5 template | themeforest | josweb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MILES</title>
-    <link href="common/statics/css/bootstrap.css" rel="stylesheet">
-    <link href="common/statics/css/grayscale.css" rel="stylesheet">
-    <link href="common/statics/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="common/vendor/flati/css/bootstrap.css" rel="stylesheet">
+    <link href="common/vendor/flati/css/font-awesome.min.css" rel="stylesheet">
+    <link href="common/vendor/flati/css/theme.css" rel="stylesheet">
+    <link href="common/vendor/flati/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
+    <link href="common/vendor/flati/css/zocial.css" rel="stylesheet" type="text/css"/>
+    <link href="common/vendor/flati/css/settings.css" rel="stylesheet" type="text/css"/>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> trading
-                </a>
+<body>
+<!--header-->
+	<div class="header">
+		<div class="container">
+		<!--logo-->
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			    <i class="fa fa-bars"></i>
+            </button>
+            <div class="logo">
+                 <a href=""><img src="common/vendor/flati/img/logo.png" alt="" class="animated bounceInDown" /></a>  
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Download</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/?m=Overview">Login</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Grayscale</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
+            <!--menu-->
+            <nav id="main_menu">
+                <div class="nav-collapse collapse">
+                    <ul class="nav nav-pills">
+                        <li class="dropdown active">
+                            <a href="">Home</a> 
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/?m=Overview">Login</a>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
+        </div>
+    </div>
+	<!--//header-->
+	
+	<!--page-->
+		<!-- REVOLUTION SLIDER -->
+        <div class="fullwidthbanner-container">
+        	<div class="fullwidthbanner">
+		<ul>
+		<!-- Slide 1 -->
+			<li data-transition="slideright">
+				<img src="common/vendor/flati/img/slider/slider1.jpg" alt="" />
+				
+				<!-- Caption -->
+				<div class="tp-caption lfr" data-x="left" data-y="195" data-speed="2400" data-start="800" data-easing="easeOutExpo">
+					<img src="common/vendor/flati/img/slider/robot1.png" alt="" />
+				</div>
+					
+				<!-- Caption -->
+				<div class="tp-caption lfb" data-x="870" data-y="140" data-speed="1400" data-start="1800" data-easing="easeOutExpo">
+					<img src="common/vendor/flati/img/slider/rocket.png" alt="" />
+				</div>
+				
+				<!-- Caption -->
+				<div class="tp-caption lfb" data-x="825" data-y="330" data-speed="1500" data-start="1900" data-easing="easeOutExpo">
+					<img src="common/vendor/flati/img/slider/flames.png" alt="" />
+				</div>
+				
+				<!-- Caption -->	
+				<div class="caption sft stl" data-x="center" data-y="105" data-speed="1000" data-start="700" data-easing="easeOutExpo">
+					<h3 class="rev-title bold">FLATI BOOTSTRAP</h3>
+				</div>
+				
+				<!-- Caption -->
+				<div class="caption lfl stl rev-title-sub" data-x="center" data-y="240" data-speed="800" data-start="1100" data-easing="easeOutExpo">
+					CREATE - DESIGN - CODE
+				</div>
+				
+				<!-- Caption -->
+				<div class="caption sfb" data-x="center" data-y="320" data-speed="1100" data-start="1500" data-easing="easeOutExpo">
+					<a href="#" class="btn btn-primary btn-custom">OUR PORTFOLIO</a>                 
+				</div>
+			</li>
+			
+			<!-- Slide 2 -->
+				<li data-transition="slideleft">
+				<img src="common/vendor/flati/img/slider/slider2.jpg" alt="" />
+				
+				<!-- Caption -->
+				<div class="tp-caption lfl" data-x="right" data-y="35" data-speed="1000" data-start="800" data-easing="easeOutExpo">
+					<img src="common/vendor/flati/img/slider/iMac.png" alt="" />
+				</div>
+					
+				<!-- Caption -->
+				<div class="caption lfl stl bg" data-x="20" data-y="60" data-speed="800" data-start="700" data-easing="easeOutExpo">
+					<h2 class="rev-title big white">Creative Slider<br>It's a Revolution!</h2>
+				</div>
+					
+				<!-- Caption -->
+				<div class="caption lfl stl rev-text rev-left" data-x="left" data-y="190" data-speed="800" data-start="1100" data-easing="easeOutExpo">
+					<p class="hidden-phone">Turn simple HTML code into a responsive sliderwith must-see-effects,<br />
+					it's Slider Revolution! All elements are included in the download,<br/>
+					plus a psd file of the iMac to add your own screenshot to.
+					<br/>Get Creative!</p>
+				</div>
+					
+				<!-- Caption -->
+				<div class="caption sfb stb rev-left" data-x="left" data-y="380" data-speed="1100" data-start="1500" data-easing="easeOutExpo">
+					<a href="#" class="btn btn-inverse btn-custom mobile">SERVICES</a>   &nbsp;&nbsp;
+					<a href="#" class="btn btn-inverse btn-custom mobile">CONTACT</a>                     
+				</div>
+			</li>
+			
+			<!-- Slide 3 -->
+				<li data-transition="slideleft" >
+				<img src="common/vendor/flati/img/slider/slider3.jpg" alt="" />
+				
+				<!-- Caption -->	
+				<div class="tp-caption lfl" data-x="right" data-y="35" data-speed="1000" data-start="800" data-easing="easeOutExpo">
+					<img src="common/vendor/flati/img/slider/robot2.png" alt="" />
+				</div>
+				
+				<!-- Caption -->
+				<div class="caption lfl stl bold bg rev-left" data-x="left" data-y="80" data-speed="800" data-start="1500" data-easing="easeOutExpo">
+					<h3 class="rev-title big bold">hire us today</h3>
+				</div>
+
+				<!-- Caption -->
+				<div class="caption lfl stl rev-text rev-left" data-x="left" data-y="200" data-speed="800" data-start="1700" data-easing="easeOutExpo">
+					<p class="white hidden-phone">This plugin features tons of unique transition effects,<br />
+					an image preloader, video embedding, autoplay that stops on user interaction<br />
+					and lots of easy to set options to create your own effects.</p>
+				</div>
+				
+				<!-- Caption -->	
+				<div class="caption sfb rev-left" data-x="left" data-y="350" data-speed="800" data-start="1900" data-easing="easeOutExpo">
+					<h3 class="rev-title2 bold">info@flatistudios.com</h3>
+				</div>	
+			</li>
+			
+			<!-- Slide 4 -->
+				<li data-transition="slidedown">
+				<img src="common/vendor/flati/img/slider/slider4.jpg" alt="" />
+				
+				<!-- Caption -->
+				<div class="caption fade fullscreenvideo" data-autoplay="false"  data-speed="500" data-start="500" data-easing="easeOutBack">
+					<iframe src="http://player.vimeo.com/video/55026049?title=0&amp;byline=0&amp;portrait=0"></iframe>
+				</div>
+				
+				<div class="caption big_white sft stt" data-x="center" data-y="25" data-speed="300" data-start="500" data-easing="easeOutExpo" data-end="4000" 
+				data-endspeed="300" data-endeasing="easeInSine">
+					Have Fun Watching the Video
+				</div>
+			</li>
+		</ul>
+			<div class="tp-bannertimer tp-bottom"></div>
             </div>
         </div>
-    </header>
+        <!-- // END REVOLUTION SLIDER -->
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Grayscale</h2>
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-            </div>
-        </div>
-    </section>
+		<div id="banner">
+	<div class="container intro_wrapper">
+	<div class="inner_content">
+	
+	<!--welcome-->
+		<div class="welcome_index">
+		I think most <a href="#"><span class="hue_block white normal">programmers</span></a> spend the first 5 years of their career mastering 
+		<span class="hue">complexity</span>	and the rest of their lives learning <span>simplicity</span>
+		- Buzz Andersen
+		</div>
+	<!--//welcome-->
+		</div>
+			</div>
+				</div>
+				<!--//banner-->
+			
+	<div class="container wrapper">
+	<div class="inner_content">
+	<div class="pad45"></div>
+	
+	<!--info boxes-->
+	<div class="row">
+		<div class="span3">
+			<div class="tile">
+			<div class="intro-icon-disc cont-large"><i class="fa fa-wrench intro-icon-large"></i></div>
+			<h6><small>DESIGN</small>
+			<br><a href="#"><span>built for &amp; by nerds</span></a></h6>
+			<p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. </p>
+			</div> 
+				<div class="pad25"></div>
+				</div> 
+				
+			<div class="span3">
+				<div class="tile">
+				<div class="intro-icon-disc cont-large"><i class="fa fa-rocket intro-icon-large"></i></div>
+				<h6><small>CODE</small>
+				<br><a href="#"><span>12-column grid</span></a></h6>
+				<p>Bootstrap is designed to help people of all skill levels - designer or developer, huge nerd or early beginner. 
+				Use it as a complete kit or use to start something.</p>
+				</div> 
+					<div class="pad25"></div>
+					</div> 
+					
+			<div class="span3">
+				<div class="tile">
+				<div class="intro-icon-disc cont-large"><i class="fa fa-flask intro-icon-large"></i></div>
+				<h6><small>CREATE</small>
+				<br><a href="#"><span>responsive</span></a></h6>
+				<p>Bootstrap have gone fully responsive. Our components are scaled according to a range of resolutions and devices to provide a consistent 
+				experience.</p>	
+				</div> 
+					<div class="pad25"></div>
+					</div> 
+				
+			<div class="span3">
+				<div class="tile tile-hot">
+				<div class="intro-icon-disc cont-large"><i class="fa fa-book  intro-icon-large"></i></div>
+				<h6> <small>SUPPORT</small>
+				<br><a href="#"><span>growing library</span></a></h6>
+				<p>Despite being only 7kb (gzipped), Bootstrap is one of the most complete front-end toolkits out there with dozens of fully functional components.</p>
+				</div>
+					<div class="pad25"></div>	
+				</div> 
+				</div> 
+				
+			<!--//info boxes-->
+			<div class="row">
+			<!--col 1-->
+			<div class="span12">
+			<div class="row">
+			<div class="pad25 hidden-phone"></div>	
+			
+			<div class="span4">
+			<h1>Recent Work</h1>
+			<h4>Lorem ipsum dolor sit amet, rebum putant recusabo in ius, pri simul tempor ne, his ei summo virtute.</h4>
+			<p>Nam ea labitur pericula. Meis tamquam pro te, cibo mutat necessitatibus id vim. An his tamquam postulant, pri id mazim nostrud diceret 
+			sapientem eloquentiam sea cu, sea ut exerci delicata. Corrumpit vituperata.</p>
+			
+			<a href="#" class="btn btn-primary  btn-custom btn-rounded">view portfolio</a>
+			<div class="pad45"></div>
+			</div>
+			<!--column 2 slider-->
+			<div class="span8 pad15 col_full2">
+			
+			<div id="slider_home">
+            <div class="slider-item">	
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s1.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s1.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">catalogue</a></h3>
+				<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s2.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s2.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">loupe</a></h3>
+				<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s3.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s3.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">retro rocket</a></h3>
+				<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s4.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s4.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">infographics</a></h3>
+				<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s5.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s5.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">mock up</a></h3>
+					<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+					</div>
+				</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s6.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s6.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">retro badges</a></h3>
+					<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+					</div>
+				</div>
+			
+			<div class="slider-item">
+			<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s7.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s7.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">details</a></h3>
+					<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+			
+			<div class="slider-item">
+				<div class="slider-image">
+				<div class="hover_colour">
+				<a href="common/vendor/flati/img/large/s8.jpg" data-rel="prettyPhoto">
+					<img src="common/vendor/flati/img/small/s8.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="slider-title">
+				<h3><a href="#">vintage form</a></h3>
+					<p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
+				</div>
+			</div>
+				</div>
+				<div id="sl-prev" class="widget-scroll-prev"><i class="fa fa-chevron-left white"></i></div>
+				<div id="sl-next" class="widget-scroll-next"><i class="fa fa-chevron-right white but_marg"></i></div>
+			</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<!--//page-->
+		
+		<div class="pad25 hidden-desktop"></div>
+	</div>
+	
+	<!-- footer -->
+	<div id="footer">
+	<h1>get in touch</h1>
+	<h3 class="center follow">
+	We're social and we'd love to hear from you! Feel free to send us an email, find us on Google Plus, follow us on Twitter and join us on Facebook.</h3>
+	
+	<div class="follow_us">
+		<a href="#" class="zocial twitter"></a>
+		<a href="#" class="zocial facebook"></a>
+		<a href="#" class="zocial linkedin"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		</div>
+	</div>
+	
+	<!-- footer 2 -->
+	<div id="footer2">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+				<div class="copyright">
+							FLATI
+							&copy;
+							<script type="text/javascript">
+							//<![CDATA[
+								var d = new Date()
+								document.write(d.getFullYear())
+								//]]>
+								</script>
+							 - All Rights Reserved :
+							Template by <a href="http://spiralpixel.com">Spiral Pixel</a>
+						</div>
+						</div>
+					</div>
+				</div>
+					</div>
+						
+				<!-- up to top -->
+				<a href="#"><i class="go-top hidden-phone hidden-tablet fa fa-angle-double-up"></i></a>
+				<!--//end-->
+<!-- SCRIPTS -->
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; MILES 2015</p>
-        </div>
-    </footer>
-    <script src="common/vendor/jquery/jquery-2.1.3.min.js"></script>
-    <script src="common/vendor/bootstrap.min.js"></script>
-    <script src="common/vendor/jquery/jquery.easing.min.js"></script>
-    <script src="common/vendor/grayscale.js"></script>
+<script src="common/vendor/flati/js/jquery.js"></script>			
+<script src="common/vendor/flati/js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="common/vendor/flati/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="common/vendor/flati/js/jquery.themepunch.plugins.min.js"></script>
+<!-- slider settings -->
+<script>
+	//<![CDATA[
+    $(document).ready(function() {
+	if ($.fn.cssOriginal!=undefined)
+	$.fn.css = $.fn.cssOriginal;
+	$('.fullwidthbanner').revolution(
+		{
+			delay:9000,
+			startwidth:1170,
+			startheight:550,
+			onHoverStop:"on",	
+			navigationType:"none",		
+			soloArrowLeftHOffset:0,
+			soloArrowLeftVOffset:0,
+			soloArrowRightHOffset:0,
+			soloArrowRightVOffset:0,
+			touchenabled:"on",			
+			fullWidth:"on",
+			shadow:0					
+		});
+	});
+//]]>
+</script>
+<script src="common/vendor/flati/js/jquery.touchSwipe.min.js"></script>
+<script src="common/vendor/flati/js/jquery.mousewheel.min.js"></script>				
+<script type="text/javascript" src="common/vendor/flati/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="common/vendor/flati/js/scripts.js"></script>
+<!-- carousel -->
+<script type="text/javascript" src="common/vendor/flati/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function($) {
+	$("#slider_home").carouFredSel({ 
+                        width : "100%", height : "auto",
+                        responsive : true,  circular : true, infinite	: false, auto : false,
+                        items : { width : 231, visible: { min: 1, max: 3 }},
+                        swipe : { onTouch : true, onMouse : true },
+                        scroll: { items: 3, },
+                        prev : { button : "#sl-prev", key : "left"},
+                        next : { button : "#sl-next", key : "right" }
+                    }
+    );
+});
+		//]]>
+</script>
 </body>
-
 </html>
