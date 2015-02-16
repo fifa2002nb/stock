@@ -10,64 +10,66 @@
 
         <title>MILES</title>
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="common/statics/css/bootstrap.css" />
-        <!-- Custom styles for this template -->
-        <link href="common/statics/css/miles_signin.css" rel="stylesheet">
+        <link rel="stylesheet" href="common/vendor/musik/css/bootstrap.css" />
+        <link rel="stylesheet" href="common/vendor/musik/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="common/vendor/musik/css/font.css" type="text/css" />
+        <link rel="stylesheet" href="common/vendor/musik/css/app.css" type="text/css" />  
     </head>
 
     <body>
         <div class="container" ng-controller="LoginCtl">
             <form name="LoginForm" class="form-signin">
-                <div class="form-group">
-                    <h3 class="form-signin-heading">
-                        <span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span>
-                    </h3>
-                    <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
-                        <div><span ng-bind-html="error.msg"></span></div>
+                <div class="row" class="form-signin">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="login-panel panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Login</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="signin" class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-t-none m-b">Sign in</h3>
+                                        <p><span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span></p>
+                                        <p>
+                                            <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
+                                                <div><span ng-bind-html="error.msg"></span></div>
+                                            </div>
+                                        </p>
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="username" class="form-control" ng-model="loginInfo.username" placeholder="{{'lang.username'|lang}}" required autofocus>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" class="form-control" ng-model="loginInfo.password" placeholder="{{'lang.password'|lang}}" required>
+                                            </div>
+                                            <div class="checkbox m-t-lg">
+                                                <button type="submit" class="btn btn-sm btn-success pull-right text-uc m-t-n-xs" ng-click="doLogin()" ng-disabled="LoginForm.$invalid">
+                                                    <strong>
+                                                        <span ng-bind="'lang.actions.login'|lang"></span>
+                                                    </strong>
+                                                </button>
+                                                <label>
+                                                    <input type="checkbox"> Remember me
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4>Not a member?</h4>
+                                        <p>You can create an account <a href="" class="text-info">here</a></p>
+                                        <p>Reset password <a href="" id="forgot-password-link" class="text-info">here </a>OR</p>
+                                        <a href="#" class="btn btn-primary btn-block m-b-sm"><i class="fa fa-facebook pull-left"></i>Sign in with Facebook</a>
+                                        <a href="#" class="btn btn-info btn-block m-b-sm"><i class="fa fa-twitter pull-left"></i>Sign in with Twitter</a>
+                                        <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google-plus pull-left"></i>Sign in with Google+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <input type="username" class="form-control" ng-model="loginInfo.username" placeholder="{{'lang.username'|lang}}" required autofocus>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" ng-model="loginInfo.password" placeholder="{{'lang.password'|lang}}" required>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block" ng-click="doLogin()" ng-disabled="LoginForm.$invalid">
-                        <span ng-bind="'lang.actions.login'|lang"></span>
-                    </button>
-                </div>
-                <div class="form-group">
-                    <a href="#" id="forgot-password-link">
-                        <span ng-bind="'lang.messages.i_fogot_password'|lang"></span>
-                    </a>
                 </div>
             </form>
-           
-            <!-- -->
-            <div id="password-reset-form" style="display: none;"> 
-                <div class="form-signin">
-                    <span>Password reset</span>
-                    <div class="close">×</div>
-                </div>
-                <form action="index.html" id="password-reset-form_id" novalidate="novalidate" class="form-signin">
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="loginInfo.reset_email" placeholder="{{'lang.email'|lang}}" required>
-                    </div>
-                    <div class="form-actions">
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">
-                               <span>reset</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
         </div> <!-- /container -->
 
         <script type="text/javascript">
@@ -113,12 +115,6 @@
                         angular.bootstrap(document, ['ones.login']);
                     });
                 }
-                $("#password-reset-form .close").click(function(){
-                    $("#password-reset-form").fadeOut();
-                });
-                $("#forgot-password-link").click(function(){
-                    $("#password-reset-form").fadeIn();
-                });
             });
         </script>
 
