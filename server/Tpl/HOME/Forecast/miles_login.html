@@ -28,8 +28,7 @@
                             <div class="panel-body">
                                 <div id="signin" class="row">
                                     <div class="col-sm-6">
-                                        <h3 class="m-t-none m-b">Sign in</h3>
-                                        <p><span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span></p>
+                                        <h3 class="m-t-none m-b"><span ng-bind="'lang.messages.please_enter_your_login_info'|lang"></span></h3>
                                         <p>
                                             <div class="alert alert-danger hide" ng-class="{'hide':!error.isError}">
                                                 <div><span ng-bind-html="error.msg"></span></div>
@@ -59,7 +58,8 @@
                                     <div class="col-sm-6">
                                         <h4>Not a member?</h4>
                                         <p>You can create an account <a href="" class="text-info">here</a></p>
-                                        <p>Reset password <a href="" id="forgot-password-link" class="text-info">here </a>OR</p>
+                                        <p>OR</p>
+                                        <!--<p>Reset password <a href="" id="forgot-password-link" class="text-info">here </a>OR</p>-->
                                         <a href="#" class="btn btn-primary btn-block m-b-sm"><i class="fa fa-facebook pull-left"></i>Sign in with Facebook</a>
                                         <a href="#" class="btn btn-info btn-block m-b-sm"><i class="fa fa-twitter pull-left"></i>Sign in with Twitter</a>
                                         <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google-plus pull-left"></i>Sign in with Google+</a>
