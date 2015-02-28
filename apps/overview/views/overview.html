@@ -1,6 +1,6 @@
-<div class "row">
-    <div class="col-xs-12">
-        <h3 class="page-header">
+<section class="scrollable padder">
+    <div class="m-b-md">
+        <h3 class="m-b-none">
             APP overview（last 30 minutes）
             <div class="navbar-right">
                 <button type="button" class="btn btn-default" ng-click="$root.goPage('overview/put/newapp')">
@@ -15,86 +15,86 @@
             </div>
         </h3>
     </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-               apps 
-            </div>
-            <div class="panel-body">
-                <div class="dataTable_wrapper">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                        <tbody>
-                            <tr class="gradeA">
-                                <td>app name</td>
-                                <td>symbol</td>
-                                <td>market</td>
-                                <td>status</td>
-                                <td>expire</td>
-                                <td>settings</td>
-                            </tr>
 
-                            <tr class="gradeA" ng-repeat="task in tasks">
-                                <td><a href="/?m=Forecast#/statistics/list/dashboard/{{task.taskname}}">{{task.taskname}}</a></td>
-                                <td>{{task.symbol}}</td>
-                                <td>{{task.market}}</td>
-                                <td>{{task.status}}</td>
-                                <td>{{task.expire_time}}</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
-                                            oprations<span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">stop</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">restart</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="" ng-click='remove("{{task.taskname}}")'>remove</a></li>
-                                        </ul>
-                                    </div>
-
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    apps 
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-               recent events summarization (2 weeks recently) 
-            </div>
-            <div class="panel-body">
-                <ul id="myTab" class="nav nav-tabs">
-                    <li class="active"><a href="#all" data-toggle="tab">all(0)</a></li>
-                    <li><a href="#warn" data-toggle="tab">warn(0)</a></li>
-                    <li><a href="#serious" data-toggle="tab">serious(0)</a></li>
-                    <li><a href="#alarm" data-toggle="tab">alarm notice(0)</a></li>
-                    <li><a href="#settings" data-toggle="tab">settings</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="all">
-                        <p>all events...</p>
-                    </div>
-                    <div class="tab-pane fade" id="warn">
-                        <p>warn events...</p>
-                    </div>
-                    <div class="tab-pane fade" id="serious">
-                        <p>serious events...</p>
-                    </div>
-                    <div class="tab-pane fade" id="alarm">
-                        <p>alarm notice...</p>
-                    </div>
-                    <div class="tab-pane fade" id="settings">
-                        <p>settings...</p>
+                <div class="panel-body">
+                    <div class="dataTable_wrapper">
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <tbody>
+                                <tr class="gradeA">
+                                    <td>app name</td>
+                                    <td>symbol</td>
+                                    <td>market</td>
+                                    <td>status</td>
+                                    <td>expire</td>
+                                    <td>settings</td>
+                                </tr>
+
+                                <tr class="gradeA" ng-repeat="task in tasks">
+                                    <td><a href="/?m=Forecast#/statistics/list/dashboard/{{task.taskname}}">{{task.taskname}}</a></td>
+                                    <td>{{task.symbol}}</td>
+                                    <td>{{task.market}}</td>
+                                    <td>{{task.status}}</td>
+                                    <td>{{task.expire_time}}</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                                                oprations<span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="">stop</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="">restart</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="" ng-click='remove("{{task.taskname}}")'>remove</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    recent events summarization (2 weeks recently) 
+                </div>
+                <div class="panel-body">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#all" data-toggle="tab">all(0)</a></li>
+                        <li><a href="#warn" data-toggle="tab">warn(0)</a></li>
+                        <li><a href="#serious" data-toggle="tab">serious(0)</a></li>
+                        <li><a href="#alarm" data-toggle="tab">alarm notice(0)</a></li>
+                        <li><a href="#settings" data-toggle="tab">settings</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="all">
+                            <p>all events...</p>
+                        </div>
+                        <div class="tab-pane fade" id="warn">
+                            <p>warn events...</p>
+                        </div>
+                        <div class="tab-pane fade" id="serious">
+                            <p>serious events...</p>
+                        </div>
+                        <div class="tab-pane fade" id="alarm">
+                            <p>alarm notice...</p>
+                        </div>
+                        <div class="tab-pane fade" id="settings">
+                            <p>settings...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

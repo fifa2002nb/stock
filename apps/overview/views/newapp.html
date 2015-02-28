@@ -1,6 +1,6 @@
-<div class "row">
-    <div class="col-xs-12">
-        <h3 class="page-header">
+<section class="scrollable padder">
+    <div class="m-b-md">
+        <h3 class="m-b-none">
             <button type="button" class="btn btn-default" ng-click="$root.goPage('overview/list/overview')">
                 <div id="return">
                     return
@@ -13,88 +13,89 @@
             new App
         </h3>
     </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                create app
-            </div>
-            <div class="panel-body">
-                <form class="form-horizontal" role="form">
-                    <div id="rootwizard">
-                        <ul>
-                            <li><a href="#tab1" data-toggle="tab">configure</a></li>
-                            <li><a href="#tab2" data-toggle="tab">finish</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane" id="tab1">
-                                <br/>
-                                <form class="form-horizontal" role="form">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">app name</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" ng-model="appname" placeholder="please input app name" class="required">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">stock symbol</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" ng-model="stocksymbol" placeholder="please input stock symbol" class="required">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label radio"></label>
-                                        <div class="col-sm-5">
-                                            <input type="radio" name="optionsRadios" value="china" ng-model="market" checked>
-                                            china market 
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label radio"></label>
-                                        <div class="col-sm-5">
-                                            <input type="radio" name="optionsRadios" value="usa" ng-model="market">
-                                            usa market
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                                <br/>
-                                <form class="form-horizontal" role="form">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" >frequency</label>
-                                        <div class="col-sm-10">
-                                            <div class="btn-group">
-                                                <label class="btn btn-default">
-                                                    <input type="radio" name="options" value="1" ng-model="freq" checked> 1 minute
-                                                </label>
-                                                <label class="btn btn-default">
-                                                    <input type="radio" name="options" value="10" ng-model="freq"> 10 minutes
-                                                </label>
-                                                <label class="btn btn-default">
-                                                    <input type="radio" name="options" value="30" ng-model="freq"> 30 minutes
-                                                </label>
-                                                <label class="btn btn-default">
-                                                    <input type="radio" name="options" value="60" ng-model="freq"> 60 minutes
-                                                </label>
-                                                <label class="btn btn-default">
-                                                    <input type="radio" name="options" value="3600" ng-model="freq"> 1 day
-                                                </label>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    create app
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div id="rootwizard">
+                            <ul>
+                                <li><a href="#tab1" data-toggle="tab">configure</a></li>
+                                <li><a href="#tab2" data-toggle="tab">finish</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="tab1">
+                                    <br/>
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">app name</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" ng-model="appname" placeholder="please input app name" class="required">
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <ul class="pager wizard">
-                                <li class="previous"><a href="">Previous</a></li>
-                                <li class="next"><a href="">Next</a></li>
-                                <li class="next finish" style="display:none;"><a href="" ng-click="submit()">Finish</a></li>
-                            </ul>
-                        </div>  
-                    </div>
-                </form>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">stock symbol</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" ng-model="stocksymbol" placeholder="please input stock symbol" class="required">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label radio"></label>
+                                            <div class="col-sm-5">
+                                                <input type="radio" name="optionsRadios" value="china" ng-model="market" checked>
+                                                china market 
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label radio"></label>
+                                            <div class="col-sm-5">
+                                                <input type="radio" name="optionsRadios" value="usa" ng-model="market">
+                                                usa market
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                    <br/>
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >frequency</label>
+                                            <div class="col-sm-10">
+                                                <div class="btn-group">
+                                                    <label class="btn btn-default">
+                                                        <input type="radio" name="options" value="1" ng-model="freq" checked> 1 minute
+                                                    </label>
+                                                    <label class="btn btn-default">
+                                                        <input type="radio" name="options" value="10" ng-model="freq"> 10 minutes
+                                                    </label>
+                                                    <label class="btn btn-default">
+                                                        <input type="radio" name="options" value="30" ng-model="freq"> 30 minutes
+                                                    </label>
+                                                    <label class="btn btn-default">
+                                                        <input type="radio" name="options" value="60" ng-model="freq"> 60 minutes
+                                                    </label>
+                                                    <label class="btn btn-default">
+                                                        <input type="radio" name="options" value="3600" ng-model="freq"> 1 day
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <ul class="pager wizard">
+                                    <li class="previous"><a href="">Previous</a></li>
+                                    <li class="next"><a href="">Next</a></li>
+                                    <li class="next finish" style="display:none;"><a href="" ng-click="submit()">Finish</a></li>
+                                </ul>
+                            </div>  
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
