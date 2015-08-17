@@ -403,7 +403,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__constant_task` (
   KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---separator
+-- separator
 
 CREATE TABLE IF NOT EXISTS `__PREFIX__stocks_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
